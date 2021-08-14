@@ -6,7 +6,7 @@ document.getElementById('submit-btn').addEventListener('click', function(){
     const userPassword = userPasswordFeild.value;
 
     if(userEmail == 'sontan@baap.com' && userPassword == '123456'){
-        window.location.href ='baaper-bank.html';
+        window.location.href ='banking.html';
     }else{
         alert('please enter valied info');
     }
