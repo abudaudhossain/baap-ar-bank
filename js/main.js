@@ -76,6 +76,39 @@ document.getElementById('withdraw-btn').addEventListener('click', function () {
     withdrawFeild.value = "";
 })
 
+// ================= 000000 ====================
+/* ====================
+baap ar balance status Function
+====================== */
+document.getElementById('withdraw-feild').addEventListener('keyup', function () {
+    const withdrawFeild = document.getElementById('withdraw-feild');
+    const withdrawAmount = parseFloat(withdrawFeild.value);
+    if (totalBalance - withdrawAmount < 500) {
+        document.getElementById('balance').style.backgroundColor = 'red';
+    } else if (totalBalance - withdrawAmount < 1000) {
+        document.getElementById('balance').style.backgroundColor = 'yellow';
+    } else {
+        document.getElementById('balance').style.backgroundColor = ''
+    }
+
+
+})
+document.getElementById('deposit-feild').addEventListener('keyup', function () {
+    const depositFeild = document.getElementById('deposit-feild');
+    const depositAmount = parseFloat(depositFeild.value);
+    if (totalBalance + depositAmount < 500) {
+        document.getElementById('balance').style.backgroundColor = 'red';
+    } else if (totalBalance + depositAmount < 1000) {
+        document.getElementById('balance').style.backgroundColor = 'yellow';
+    } else {
+        document.getElementById('balance').style.backgroundColor = ''
+    }
+
+
+})
+
+/* ================ ===000=== ===================== */
+
 
 
 
